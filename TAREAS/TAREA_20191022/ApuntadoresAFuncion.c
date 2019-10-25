@@ -7,6 +7,7 @@ int (*f)(int,int);
 int (*g)(int,int);
 void Funcion(int (*)(int,int),int,int);
 int mcd(int,int);
+
 int d(int,int);
 int main(){
   int A,B;
