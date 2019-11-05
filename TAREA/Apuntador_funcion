@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+void suma(int a, int b)
+{
+    printf("La suma es: %d\n", a+b);
+}
+void resta(int a, int b)
+{
+    printf("La resta es: %d\n", a-b);
+}
+void multiplicacion(int a, int b)
+{
+    printf("La multiplicacion es: %d\n", a*b);
+}
+void division(int a,int b)
+{
+    printf("La division es: %d\n",a/b);
+}
+
+int main()
+{
+    int a,b,opc;
+    printf("Ingresa un numero\n");
+    scanf("%d",&a);
+    printf("Ingresa otro numero\n");
+    scanf("%d",&b);
+    // fun_ptr_arr is an array of function pointers
+    void (*fun_ptr_arr[])(int, int) = {suma, resta, multiplicacion,division};
+    //unsigned int ch, a = 15, b = 10;
+
+    printf("Seleccione\n 0 para suma\n 1 para resta \n 2  para multiplicar\n3 para division\n");
+    scanf("%d", &opc);
+    while(opc<0 || opc>=4)
+    {
+        printf("Seleccione\n 0 para suma\n 1 para resta \n 2  para multiplicar\n 3 para division\n");
+    scanf("%d", &opc);
+    }
+
+    (*fun_ptr_arr[opc])(a, b);
+
+    return 0;
+}
