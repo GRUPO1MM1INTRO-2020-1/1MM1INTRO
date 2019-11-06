@@ -1,7 +1,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <string.h>
-int x;
+int y;
 int main()
 {
   time_t t;
@@ -15,8 +15,8 @@ int main()
 	
 	printf("La hora es: %s\n",hora);
 uno:
-	x = strcmp(hora,hora2);
-	if (x==0){
+	y = strcmp(hora,hora2);
+	if (y==0){
 	t=time(NULL);
 	tm=localtime(&t);
 	strftime(hora, 100, "%I:%M", tm);
