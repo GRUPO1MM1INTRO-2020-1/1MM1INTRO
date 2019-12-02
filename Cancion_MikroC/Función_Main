@@ -1,0 +1,79 @@
+void main() {
+ ANSEL=0;
+ ANSELH=0;
+ TRISB=0;
+ PORTB=0;
+ Sound_Init(&PORTB, 0);
+ while(1){
+ int i,i2,i3,i4;
+for (i=0;i<4;i++){//verso 1
+mi_0();
+mi_0();
+re_0 ();
+re_0 ();
+do_0 ();
+do_0 ();
+re_0 ();
+re_0 ();
+}//end i
+
+for (i2=0;i2<2;i2++){//verso 2
+sol_sos();
+sol_sos();
+sol_0();
+sol_0();
+fa_sos ();
+fa_sos ();
+sol_0();
+sol_0();
+} //end i2
+
+for (i3=0;i3<2;i3++){//verso 3
+mi_0();
+mi_0();
+re_0 ();
+re_0 ();
+do_0 ();
+do_0 ();
+re_0 ();
+re_0 ();
+}//end i3
+
+for (i4=0;i4<2;i4++){//verso 4
+la_sos ();
+la_sos ();
+la_0 ();
+la_0 ();
+sol_sos();
+sol_sos();
+la_0 ();
+la_0 ();
+}//end i4
+
+//verso 6
+re_sos ();
+re_sos ();
+do_sos ();
+do_sos ();
+sol_sos();
+sol_sos();
+
+do_sos ();
+do_sos ();
+re_0 ();
+re_0 ();
+re_sos ();
+re_sos ();
+re_0 ();
+re_0 ();
+
+do_sos ();
+do_sos ();
+re_0 ();
+re_0 ();
+re_sos ();
+sol_sos();
+sol_sos();
+
+ }//END WHILE
+}     //END MAIN
