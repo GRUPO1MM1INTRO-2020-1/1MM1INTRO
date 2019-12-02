@@ -26,7 +26,9 @@ int f(int X, int Y){
 		res=30;
 	}
 	else{
-	printf("La funcion no esta definida para esos valores");	
+		//Fecha de nacimiento de Linus Torvalds
+		//28 de Diciembre de 1969
+		res=28121969;
 	}
 	return res;
 }
