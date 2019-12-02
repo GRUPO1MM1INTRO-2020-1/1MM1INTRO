@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+/*
+int x,y,z,t,q,j,u;
+z=31;
+y=1;
+x=2;
+q=0;
+t=30;
+j=28;
+u=29;
+
+*/
+  if (x>=1 && x<=6 && (x%2 != 0)){
+     return 31;
+
+    }else
+    {
+        q=q+1;
+    }
+
+
+  if (x>=1 && x<=6 && (x%2 == 0) && (x!= 2)){
+     return 30;
+    }else
+    {
+        q=q+1;
+    }
+
+  if (x>=7 && x<=8){
+     return 31;
+    }else
+    {
+        q=q+1;
+    }
+
+  if (x>=9 && x<=12 && (x%2 != 0)){
+     return 30;
+
+    }else
+    {
+        q=q+1;
+    }
+
+  if (x>=9 && x<=12 && (x%2 == 0)){
+     return 31;
+    }else
+    {
+        q=q+1;
+    }
+
+  if (x==2 && y==0){
+     return 28;
+    }else
+    {
+        q=q+1;
+    }
+
+if (x==2 && y==1){
+     return 29;
+    }else
+    {
+        q=q+1;
+    }
+
+    if (q==7){
+
+        printf("El digito introducido no aplica a ningun parametro establecido ");
+
+    }
+
+
+
+}
+
