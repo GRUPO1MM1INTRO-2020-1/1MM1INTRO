@@ -1,0 +1,36 @@
+void do_0 (){
+sound_play(1000,1000);
+}
+void do_sos (){
+sound_play(1059,1000);
+}
+void re_0 (){
+sound_play(1122,1000);
+}
+void re_sos (){
+sound_play(1189,1000);
+}
+void mi_0 (){
+sound_play(1259,1000);
+}
+void fa_0 (){
+sound_play(1334,1000);
+}
+void fa_sos (){
+sound_play(1414,1000);
+}
+void sol_0 (){
+sound_play(1498,1000);
+}
+void sol_sos (){
+sound_play(1587,1000);
+}
+void la_0 (){
+sound_play(1681,1000);
+}
+void la_sos (){
+sound_play(1781,1000);
+}
+void si_0 (){
+sound_play(1887,1000);
+}
