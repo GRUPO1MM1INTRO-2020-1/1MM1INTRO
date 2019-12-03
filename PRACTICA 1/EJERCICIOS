@@ -1,0 +1,213 @@
+** EJERCICIO 1**
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main () {
+    int x,y,a,b,res;
+    system("pause");
+    system("pause");
+    printf("Ingrese valor x: ");
+        scanf("%d",&x);
+
+
+    printf("Ingresa valor y: ");
+        scanf("%d",&y);
+
+    printf("Ingrese valor a: ");
+        scanf("%d",&a);
+
+    printf("Ingresa valor b: ");
+        scanf("%d",&b);
+
+    res=(x+y)*(x+y)*(a-b);
+
+    printf("R= %d",res);
+    system("pause");
+}
+
+** EJERCICIO 2**
+#include <stdio.h>
+#include <math.h>
+
+int main()
+
+
+{
+    float p,ya,pu,cm,m;
+        printf("Ingrese la cantidad que quiere a convertir en pies\n");
+        scanf("%f",&p);
+        pu=p*12;
+         printf("La conversion de pies a pulgadas es: %.0f\n",pu );
+        ya=p*0.3;
+         printf("La conversion de pies a yardas es: %.0f\n",ya );
+        cm=pu*2.54;
+        printf("La conversion de pies a centimetros es: %.2f\n",cm );
+        m=cm/100;
+        printf("La conversion de pies a metros es: %.2f\n",m );
+}
+
+
+**EJERCICIO 3**
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+int main()
+{
+     int r, h;
+     float a, v, g;
+    float      pi=3.1416;
+
+
+       printf("Ingrese el radio\n");
+       scanf("%i", &r);
+       printf("Ingrese la altura\n");
+       scanf("%i", &h);
+
+       g=sqrt(pow(h,2)+pow(r,2));
+       a=((2)*(pi)*(r)*(g/2))+ pi*(pow(r,2));
+       v=((pi)*(pow(r,2))*(h))/3;
+
+       printf("\n El area es: %.2f", a);
+       printf("\n El volumen es: %.2f", v);
+}
+
+
+** EJERCICIO 4**
+#include <stdio.h>
+#include <stdlib.h>
+
+int conver(int s);
+int esmayor(int s);
+int h, m, s;
+int main()
+{
+printf( "Ingrese la cantidad de sugundos totales:" );
+printf( "\n" );
+scanf( "%i", &s );
+(s>0&&s<=86400) ? conver(s):esmayor(s);
+}
+int conver(int s)
+{
+h = s / 3600;
+s = s % 3600;
+m = s / 60;
+s = s % 60;
+printf( "Equivale a %i horas %i min. y %i seg.\n", h, m,s );
+}
+int esmayor(int s)
+
+{
+    while (s<0&&s>86400);
+    {
+    printf("Ingrese nuevamente el numero de segundos totales\n");
+    scanf( "%i", &s );
+    }
+    (s>0&&s<=86400) ? conver(s):esmayor(s);
+}
+
+
+** EJERCICIO 5 **
+#include<stdio.h>
+#include<stdlib.h>
+
+int main ()
+{
+
+    float valor,celsius,farenheit;
+    char escala;
+    char escalaf='f';
+    int confc(float valor,float celsius);
+    int concf(float valor,float farenheit);
+
+
+    printf("Ingrese la temperatura y la inicial en minuscula de su escala: \n");
+                    scanf("%f%c",&valor,&escala);
+    (escala==escalaf) ? confc(valor,celsius): concf(valor,farenheit);
+
+
+}
+
+int confc(float valor,float celsius)
+{
+
+ celsius=(valor-32)/1.8;
+ printf("El valor en Celsius es:%.2f\n",celsius);
+}
+
+int concf(float valor,float farenheit)
+{
+    farenheit=((9*valor)/5)+32;
+    printf("El valor en Farenheit es:%.2f\n",farenheit);
+
+}
+
+
+** EJERCICIO 6**
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int liq, di; 
+int agua(int liq);
+int diesel(int liq);
+int dena=1000, dend=820;
+float h, v;
+int ph;
+float g=9.8, pi=3.1416;
+
+int main(void)
+{
+
+  	printf("Introduzca el liquido 1=agua 2=diesel, solo debe introducir esos dos numeros\n");
+  	scanf("%d", &liq);
+	(liq==1)? agua(liq): diesel(liq);	
+	
+}
+
+
+int agua(int liq)
+{
+    printf("\n El liquido es AGUA\n \n");
+    printf("Ingrese la presion hidrostatica dada por el sensor \n");
+    scanf("%d", &ph);
+    
+    h=ph/(dena*g);
+    
+    printf("\nLa altura del liquido es %.2f \n\n", h);
+    
+    printf("Ingrese el diametro en metros \n");
+    scanf("%d", &di);
+    
+    v=pi*(pow(di/2,2))*h;
+    
+    printf("\n\nEl VOLUMEN del pozo es %.2f  m3", v);
+    
+
+}
+
+int diesel(int liq)
+{
+	printf("\nEl liquido es DIESEL\n");
+    printf("\nIngrese la presion hidrostatica dada por el sensor  \n");
+    scanf("%d", &ph);
+    
+    h=(ph)/(dend*g);
+    
+    printf("\n\nLa altura del liquido es %.2f", h);
+    
+    printf("\n\nIngrese el diametro en metros\n");
+    scanf("%d", &di);
+    
+    v=pi*(pow(di/2,2))*h;
+    
+    printf("\n\nEl VOLUMEN del pozo es %.2f  m3", v);
+		
+}
+
+
+
+
+
+
