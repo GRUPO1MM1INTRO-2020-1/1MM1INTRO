@@ -1,0 +1,50 @@
+/*Programa 2:
+Escribe un programa que convierta una medida dada en pies a sus equivalentes en 
+Yardas,Pulgadas,centimetros y metros
+Flores Negrete Azereth 1MM1*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+void Leer (float &refft);
+void Conversion(float &refft,float &refyd,float &refpulg,float &refcm,float &refm);
+void Imprimir(float &refyd,float &refpulg,float &refcm,float &refm);
+
+//************************************Main*********************************************
+int main ()
+{
+    float ft,yd,pulg,cm,m;
+    Leer(ft);
+    Conversion(ft,yd,pulg,cm,m);
+    Imprimir(yd,pulg,cm,m);
+
+system ("pause");
+return 1;
+}//end main
+
+//************************************Leer************************************************
+void Leer (float &refft)
+{
+     printf("Ingresa tu valor en pies: \n");
+                     scanf("%f",&refft);
+}//end leer
+
+//***********************************Conversion*******************************************
+void Conversion(float &refft,float &refyd,float &refpulg,float &refcm,float &refm)
+{
+   refyd=0.333333*refft;
+   refpulg=12*refft;
+   refcm=30.48*refft;
+   refm=0.3048*refft;
+}//end conversion
+
+//************************************Imprimir*******************************************
+void Imprimir(float &refyd,float &refpulg,float &refcm,float &refm)
+{ 
+   printf("Tu valor en yardas es: %.2f\n", refyd); 
+   printf("Tu valor en pulgadas es: %.2f\n", refpulg); 
+   printf("Tu valor en centimetros es: %.2f\n", refcm); 
+   printf("Tu valor en metros es: %.2f\n", refm);  
+     
+}//end imprimir

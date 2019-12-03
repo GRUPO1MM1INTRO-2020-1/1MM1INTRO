@@ -1,0 +1,58 @@
+/*Programa 3:
+Escribe un programa que calcule el área y volumen de un cono
+Flores Negrete Azereth 1MM1*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#define pi 3.1416//define la constante pi
+
+void Leer(double &refR,double &refH);
+void Calcular(double &refR,double &refH,double &refG,double &refVOL,double &refAREA);
+void Imprimir(double &refVOL,double &refAREA);
+
+//*****************************************Main*********************************************
+int main ()
+{
+    double R,H,G,VOL,AREA;
+    
+    Leer(R,H);
+    Calcular(R,H,G,VOL,AREA);
+    Imprimir(VOL,AREA);
+    
+system("pause");
+return 1;
+}//end main
+
+//******************************************Leer*******************************************
+void Leer(double &refR,double &refH)
+{
+     printf("Area y volumen de un cono\n");
+     printf("Ingresa el radio: \n");
+                     scanf("%lf",&refR);
+     printf("Ingresa la altura: \n");
+                     scanf("%lf",&refH);
+}//end Leer
+
+//****************************************Calcular******************************************
+void Calcular(double &refR,double &refH,double &refG,double &refVOL,double &refAREA)
+{
+     //Volumen
+     refVOL=pi/3;
+     refVOL=refVOL*refR*refR;
+     refVOL=refVOL*refH;
+     //Area
+     refG=(refH*refH)+(refR*refR);
+     refG=sqrt(refG);
+     
+     refAREA=2*pi*refR*(refG/2);
+     refAREA=refAREA+(pi*refR*refR);
+     
+}//end calcular
+
+//*****************************************Imprimir*****************************************
+void Imprimir(double &refVOL,double &refAREA)
+{
+     printf("El volumen del cono es:%.2lf\n",refVOL);
+     printf("El area del cono es:%.2lf\n",refAREA);
+}//end imprimir

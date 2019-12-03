@@ -1,0 +1,49 @@
+/*Programa 4:
+Convierte un numero dado en segundos a su equivalente de
+horas, minutos y segundos
+Flores Negrete Azereth 1MM1*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+//Prototipos
+void Leer(int &ref_seg_totales);
+
+int Cal_menor_60(int &ref_seg_totales);
+int Cal_mayor_60(int &ref_seg_totales);
+
+//*****************************************Main********************************************
+int main ()
+{
+  int seg_totales,horas,min,seg;
+  Leer(seg_totales);
+  ((seg_totales/60)<60)?  Cal_menor_60(seg_totales): Cal_mayor_60(seg_totales);
+  
+    
+system("pause");
+return 1;
+}//end main
+
+//****************************************Leer********************************************
+void Leer(int &ref_seg_totales)
+{
+     printf("Ingresa el numero de segundos totales: \n");
+                     scanf("%d",&ref_seg_totales);
+}//end leer
+
+
+//***************************************menor_60*****************************************
+int Cal_menor_60(int &ref_seg_totales)
+{
+ printf("Las horas son %d\n",ref_seg_totales/3600);
+ printf("Los minutos son %d\n",ref_seg_totales/60);   
+ printf("los segundos son %d\n",ref_seg_totales%60); 
+}
+
+//***************************************mayor_60*****************************************
+int Cal_mayor_60(int &ref_seg_totales)
+{
+ printf("Las horas son %d\n",ref_seg_totales/3600);
+ printf("Los minutos son %d\n",ref_seg_totales%3600/60);   
+ printf("los segundos son %d\n",ref_seg_totales%60);   
+}

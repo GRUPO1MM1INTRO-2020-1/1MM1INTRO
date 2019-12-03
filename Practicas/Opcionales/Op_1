@@ -1,0 +1,21 @@
+/*Programa Opcional 1
+Calcular la resistencia
+Flores Negrete Azereth 1MM1*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+//************************************Main***************************************************
+int main ()
+{
+    float r,v,i;
+    printf("Ingresa el valor del voltaje: \n");
+                    scanf("%f",&v);
+    printf("Ingresa el valor de la corriente: \n");
+                    scanf("%f",&i);
+    r=v/i;
+    printf("El valor de la resistencia es:%.2f ohms \n",r);
+    
+system("pause");
+return 1;
+}//end main
