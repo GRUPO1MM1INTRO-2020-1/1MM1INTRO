@@ -1,8 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
+
 int f(int a, int b);
 
-int main()
 {
     int x,y,k;
     printf("Ingresa un valor x de 1 a 12\n");
