@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
 int f(int a, int b);
-
-int main()
 {
     int x,y,k;
     printf("Ingresa un valor entero del campo A con entradas del 1 al 12\n");
