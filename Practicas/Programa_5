@@ -1,0 +1,49 @@
+/*Programa 5:
+Convertidor de Temperatura
+de Celsius a Farenheit
+de Farenheit a Celsius
+Flores Negrete Azereth 1MM1*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+
+int cal_farenheit(float &ref_valor,float &ref_celsius);
+int cal_celsius(float &ref_valor,float &ref_farenheit);
+
+//****************************************Main*********************************************
+int main ()
+{
+    
+    float valor,celsius,fare;
+    char letra;
+    char letra1='f';
+    char letra2='c';
+    printf("Ingrese la temperatura indicando 'f' si es Farenheit o 'c' si es Celsius, Ejemplo '5f'5: \n");
+                    scanf("%f%c",&valor,&letra);
+    (letra==letra1) ?  cal_farenheit(valor,celsius): cal_celsius(valor,fare);    
+    
+system("pause");
+return 1;
+}//end main
+
+//**************************************farenheit******************************************
+int cal_farenheit(float &ref_valor,float &ref_celsius)
+{
+ //De farenheit a celsius
+ ref_celsius=ref_valor-32;
+ ref_celsius=ref_celsius/1.8;
+ printf("El valor en Celsius es:%f\n",ref_celsius);
+}//end farenheit
+
+//**************************************celsius********************************************
+int cal_celsius(float &ref_valor,float &ref_farenheit)
+{
+    //De celsius a Fareheit
+    ref_farenheit=9*ref_valor;
+    ref_farenheit=ref_farenheit/5;
+    ref_farenheit=ref_farenheit+32;
+    printf("El valor en Farenheit es:%f\n",ref_farenheit);
+       
+}
+
