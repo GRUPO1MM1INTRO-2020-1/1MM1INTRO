@@ -1,0 +1,38 @@
+
+float x;
+float y;
+int xent = (int) x;
+int yent = (int) y;
+
+int f(int x, int y)
+{
+if (x==1 || x==2 || x==3 ||x==4 || x==5 || x==6 ||x==7 || x==8 || x==9 ||x==10 || x==11 || x==12 && x==xent && y==yent){
+	if ((x>=1)&&(x<=6)&&(x % 2 == 1)){
+		printf("31");
+	}
+	else if ((x>=1)&&(x<=6)&&(x % 2 == 0)&&(x!=2)){
+		printf("30");
+	}
+	else if ((x>=7)&&(x<=8)){
+		printf("31");
+	}	
+	else if ((x>=9)&&(x<=12)&&(x % 2 == 1){
+		printf("30");
+	}
+	else if ((x>=9)&&(x<=12)&&(x % 2 == 0){
+		printf("31");
+	}
+	else if ((x==2)&&(y==0)&&){
+		printf("28");
+	}
+	else if ((x>=2)&&(x<=1)){
+		printf("29");
+	}
+	else {
+	printf("Revisa las instrucciones ñero");
+	}
+}
+else {
+	printf("Revisa las instrucciones Chato");
+}
+}
