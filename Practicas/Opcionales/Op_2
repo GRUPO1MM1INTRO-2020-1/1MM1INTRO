@@ -1,0 +1,19 @@
+/*Programa Opcional 2
+Convertir cantidad en pesos a monedas
+Flores Negrete Azereth 1MM1*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+//************************************Main***************************************************
+int main ()
+{
+    int pesos_totales,m_10,m_5,m_2,m_1;
+    printf("Ingresa la cantidad de pesos: \n");
+                    scanf("%int",&pesos_totales);
+    printf("Monedas de 10:%d\nMonedas de 5:%d\nMonedas de 2:%d\nMonedas de 1:%d\n",
+    pesos_totales/10,pesos_totales/5,pesos_totales/2,pesos_totales);
+    
+system("pause");
+return 1;
+}//end main
